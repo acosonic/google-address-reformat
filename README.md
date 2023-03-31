@@ -6,8 +6,9 @@ Takes address in any format,
 And returns it like
 
 usage
-
+```
 npm i google-address-reformat
+```
 
 use in your project:
 ```
