@@ -1,6 +1,6 @@
 {
   "name": "google-address-reformat",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Takes any kind of string address and runs it agianst google address validation API",
   "main": "index.js",
   "scripts": {
