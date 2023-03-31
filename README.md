@@ -10,7 +10,7 @@ usage
 npm i google-address-reformat
 
 use in your project:
-
+```
 const adr = require('google-address-reformat');
 const your_google_api_key = 'xxxx';
 
@@ -21,3 +21,4 @@ async function main() {
   const result = await adr.getAddress(address,your_google_api_key);
   console.log(result);
 };
+```
