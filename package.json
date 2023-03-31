@@ -1,0 +1,26 @@
+{
+  "name": "google-address-reformat",
+  "version": "1.0.0",
+  "description": "Takes any kind of string address and runs it agianst google address validation API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acosonic/google-address-reformat.git"
+  },
+  "keywords": [
+    "address",
+    "google"
+  ],
+  "author": "Aleksandar Pavic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acosonic/google-address-reformat/issues"
+  },
+  "homepage": "https://github.com/acosonic/google-address-reformat#readme",
+  "dependencies": {
+    "https": "^1.0.0"
+  }
+}
