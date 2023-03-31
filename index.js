@@ -42,6 +42,7 @@ exports.getAddress = async function (address,key) {
 }
 
 function changeAddressFormat(address) {
+  console.log(address);
   const addressParts = address.split(', ');
 
   const street = addressParts[0];
@@ -49,13 +50,16 @@ function changeAddressFormat(address) {
   const stateZipCountry = addressParts[2].split(' ');
   const zip = stateZipCountry[1];
   const state = stateZipCountry[0];
+  const country = addressParts[3];
 
   return {
     "street": street,
     "city": city,
     "state": state,
-    "zip": zip
+    "zip": zip,
+    "country": country
   };
+
 }
 
 
