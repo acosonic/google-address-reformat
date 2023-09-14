@@ -1,6 +1,6 @@
 const https = require('https');
 
-exports.getAddress = async function (address,key) {
+exports.getAddress = async function (address, key) {
   address = compileAndStrip(address);
   try {
     const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${key}`;
@@ -42,23 +42,28 @@ exports.getAddress = async function (address,key) {
 }
 
 function changeAddressFormat(address) {
-  console.log(address);
-  const addressParts = address.split(', ');
+  try {
+    console.log(address);
+    const addressParts = address.split(', ');
 
-  const street = addressParts[0];
-  const city = addressParts[1];
-  const stateZipCountry = addressParts[2].split(' ');
-  const zip = stateZipCountry[1];
-  const state = stateZipCountry[0];
-  const country = addressParts[3];
+    const street = addressParts[0];
+    const city = addressParts[1];
+    const stateZipCountry = addressParts[2].split(' ');
+    const zip = stateZipCountry[1];
+    const state = stateZipCountry[0];
+    const country = addressParts[3];
 
-  return {
-    "street": street,
-    "city": city,
-    "state": state,
-    "zip": zip,
-    "country": country
-  };
+    return {
+      "street": street,
+      "city": city,
+      "state": state,
+      "zip": zip,
+      "country": country
+    };
+  } catch (error) {
+    console.error('Error making API request: ', error);
+    return address;
+  }
 
 }
 
